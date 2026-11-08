@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">VehicleEqualizerApp</string>
+    <string name="title_equalizer">Equalizador Automotivo</string>
+    <string name="subtitle_equalizer">Sistema de Áudio do Veículo</string>
+    <string name="label_equalizer_switch">Equalizador</string>
+    <string name="label_bass">Graves</string>
+    <string name="label_mid">Médios</string>
+    <string name="label_treble">Agudos</string>
+    <string name="hint_disabled">Ative o equalizador para ajustar os níveis</string>
+</resources>

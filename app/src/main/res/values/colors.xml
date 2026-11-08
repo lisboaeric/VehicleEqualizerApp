@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Cores automotivas -->
+    <color name="automotive_bg">#FF121212</color>
+    <color name="automotive_surface">#FF1E1E1E</color>
+    <color name="automotive_accent">#FF00D2FF</color>
+    <color name="automotive_accent_dark">#FF0099BB</color>
+    <color name="text_primary">#FFFFFFFF</color>
+    <color name="text_secondary">#FFB0B0B0</color>
+    <color name="seekbar_track">#FF444444</color>
+    <color name="card_bg">#FF2A2A2A</color>
+</resources>

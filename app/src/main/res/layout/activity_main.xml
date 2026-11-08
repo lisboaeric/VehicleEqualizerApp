@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/automotive_bg"
+    android:padding="24dp"
+    tools:context=".MainActivity">
+
+    <!-- Título principal -->
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/title_equalizer"
+        android:textColor="@color/text_primary"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:letterSpacing="0.05"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <!-- Subtítulo -->
+    <TextView
+        android:id="@+id/tvSubtitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/subtitle_equalizer"
+        android:textColor="@color/text_secondary"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="4dp" />
+
+    <!-- Divisor -->
+    <View
+        android:id="@+id/divider"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/automotive_accent"
+        android:alpha="0.4"
+        app:layout_constraintTop_toBottomOf="@id/tvSubtitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <!-- Label do Switch -->
+    <TextView
+        android:id="@+id/tvSwitchLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/label_equalizer_switch"
+        android:textColor="@color/text_primary"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/divider"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/equalizerSwitch"
+        android:layout_marginTop="28dp" />
+
+    <!-- Switch para ligar/desligar equalizador -->
+    <Switch
+        android:id="@+id/equalizerSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:thumbTint="@color/automotive_accent"
+        android:trackTint="@color/seekbar_track"
+        app:layout_constraintTop_toBottomOf="@id/divider"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="28dp" />
+
+    <!-- ===== GRAVES ===== -->
+    <TextView
+        android:id="@+id/tvBassLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/label_bass"
+        android:textColor="@color/text_secondary"
+        android:textSize="15sp"
+        app:layout_constraintTop_toBottomOf="@id/equalizerSwitch"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="40dp" />
+
+    <TextView
+        android:id="@+id/tvBassValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="50"
+        android:textColor="@color/automotive_accent"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="@id/tvBassLabel"
+        app:layout_constraintBottom_toBottomOf="@id/tvBassLabel"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <SeekBar
+        android:id="@+id/bassSeekBar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:max="100"
+        android:progress="50"
+        android:progressTint="@color/automotive_accent"
+        android:thumbTint="@color/automotive_accent"
+        android:progressBackgroundTint="@color/seekbar_track"
+        android:enabled="false"
+        android:alpha="0.4"
+        app:layout_constraintTop_toBottomOf="@id/tvBassLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp" />
+
+    <!-- ===== MÉDIOS ===== -->
+    <TextView
+        android:id="@+id/tvMidLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/label_mid"
+        android:textColor="@color/text_secondary"
+        android:textSize="15sp"
+        app:layout_constraintTop_toBottomOf="@id/bassSeekBar"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="32dp" />
+
+    <TextView
+        android:id="@+id/tvMidValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="50"
+        android:textColor="@color/automotive_accent"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="@id/tvMidLabel"
+        app:layout_constraintBottom_toBottomOf="@id/tvMidLabel"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <SeekBar
+        android:id="@+id/midSeekBar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:max="100"
+        android:progress="50"
+        android:progressTint="@color/automotive_accent"
+        android:thumbTint="@color/automotive_accent"
+        android:progressBackgroundTint="@color/seekbar_track"
+        android:enabled="false"
+        android:alpha="0.4"
+        app:layout_constraintTop_toBottomOf="@id/tvMidLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp" />
+
+    <!-- ===== AGUDOS ===== -->
+    <TextView
+        android:id="@+id/tvTrebleLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/label_treble"
+        android:textColor="@color/text_secondary"
+        android:textSize="15sp"
+        app:layout_constraintTop_toBottomOf="@id/midSeekBar"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="32dp" />
+
+    <TextView
+        android:id="@+id/tvTrebleValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="50"
+        android:textColor="@color/automotive_accent"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="@id/tvTrebleLabel"
+        app:layout_constraintBottom_toBottomOf="@id/tvTrebleLabel"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <SeekBar
+        android:id="@+id/trebleSeekBar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:max="100"
+        android:progress="50"
+        android:progressTint="@color/automotive_accent"
+        android:thumbTint="@color/automotive_accent"
+        android:progressBackgroundTint="@color/seekbar_track"
+        android:enabled="false"
+        android:alpha="0.4"
+        app:layout_constraintTop_toBottomOf="@id/tvTrebleLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp" />
+
+    <!-- Dica quando desabilitado -->
+    <TextView
+        android:id="@+id/tvHint"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/hint_disabled"
+        android:textColor="@color/text_secondary"
+        android:textSize="13sp"
+        android:gravity="center"
+        android:layout_marginTop="32dp"
+        app:layout_constraintTop_toBottomOf="@id/trebleSeekBar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
